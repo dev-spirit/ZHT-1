@@ -6,7 +6,7 @@ ZHT is a zero-hop distributed hash table(see also the paper, http://datasys.cs.i
 Google protocol buffers c++ binding, VERSION 2.4.1 (this and 2.4.0 version only supported by the ZHT-master so take of this)
 		https://launchpad.net/ubuntu/+archive/primary/+files/protobuf_2.4.1.orig.tar.gz
 		
-		./autogen        
+		./autogen.sh       
 		./configure      (it's goes to default directory which is /usr/local)
 		make 
 		make check (if you get error don't bother about that leave it)
