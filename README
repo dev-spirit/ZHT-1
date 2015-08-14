@@ -2,13 +2,12 @@
 ZHT is a zero-hop distributed hash table(see also the paper, http://datasys.cs.iit.edu/projects/ZHT/ZHT-CRC-PID2666213-Final.pdf).
 
 -------------------SOFTWARE REQUIREMENTS-------------------
-Google protocol buffers c binding, VERSION 0.15 or later
-		http://code.google.com/p/protobuf-c/downloads/list
 
-
-Google protocol buffers c++ binding, VERSION 2.4.1
+Google protocol buffers c++ binding, VERSION 2.4.1 (this and 2.4.0 version only supported by the ZHT-master so take of this)
 		https://launchpad.net/ubuntu/+archive/primary/+files/protobuf_2.4.1.orig.tar.gz
 
+Google protocol buffers c binding, VERSION 0.15 (later version not supported to protobuf c++ binding so make sure of version)
+		http://code.google.com/p/protobuf-c/downloads/list
 
 -------------------ABOUT ZHT API, SPECIAL ATTENTION-------------------
 ZHT supports the API set such as insert/lookup/remove/append/compare_swap.
@@ -29,33 +28,6 @@ Assuming that you installed them to default directory, possibly that is, /usr/lo
 4. cd to ZHT src directory
 5. TO COMPILE ZHT, RUN
    make
-
-ORTHERWISE, assuming that you will install them to /home/xiaobingo/install, follow THE ORDER:
-1. firstly install Google protocol buffers c++ binding, by running
-   1) cd to <Google protocol buffers c++ binding> home directory
-   2) ./configure --prefix=/home/xiaobingo/install
-   3) make
-   4) make install
-2. then install Google protocol buffers c binding, in this step, you may get error like: ERROR: protobuf headers are required.,
-   follow the instructions, 
-   1) cd to <Google protocol buffers c binding> home directory
-   2) ./configure --prefix=/home/xiaobingo/install CXXFLAGS=-I/home/xiaobingo/install/include LDFLAGS=-L/home/xiaobingo/install/lib
-   3) make
-   4) make install
-  
-   
-If you installed Google protocol buffers c and c++ bindings to customized directory, e.g./home/xiaobingo/install, MAKE SURE TO EXPORT them,
-1. vim/gedit ~/.bashrc
-2. append the following lines to the end,
-	export USER_LIB=/home/xiaobingo/install/lib/
-	export USER_INCLUDE=/home/xiaobingo/install/include/
-	export LD_LIBRARY_PATH=/home/xiaobingo/install/lib/
-3. source ~/.bashrc
-4. cd to ZHT src directory
-5. TO COMPILE ZHT, RUN
-   make
-
-, otherwise, you probably fail to compile ZHT or locate dependencies required by ZHT runtime.
 
    
 -------------------RUN THE BENCHMARK-------------------
