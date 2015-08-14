@@ -5,9 +5,19 @@ ZHT is a zero-hop distributed hash table(see also the paper, http://datasys.cs.i
 
 Google protocol buffers c++ binding, VERSION 2.4.1 (this and 2.4.0 version only supported by the ZHT-master so take of this)
 		https://launchpad.net/ubuntu/+archive/primary/+files/protobuf_2.4.1.orig.tar.gz
+		
+		./autogen        
+		./configure      (it's goes to default directory which is /usr/local)
+		make 
+		make check (if you get error don't bother about that leave it)
+		sudo make install
 
 Google protocol buffers c binding, VERSION 0.15 (later version not supported to protobuf c++ binding so make sure of version)
 		http://code.google.com/p/protobuf-c/downloads/list
+		
+		./configure
+		make 
+		sudo make install
 
 -------------------ABOUT ZHT API, SPECIAL ATTENTION-------------------
 ZHT supports the API set such as insert/lookup/remove/append/compare_swap.
@@ -21,7 +31,7 @@ FIRSTLY install Google protocol buffers c++ binding,
 AND THEN install Google protocol buffers c binding since the latter dependes on the former.
 
 Assuming that you installed them to default directory, possibly that is, /usr/local
-1. vim/gedit ~/.bashrc
+1. vim ~/.bashrc
 2. append the following lines to the end,
 	export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 3. source ~/.bashrc
