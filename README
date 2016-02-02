@@ -2,6 +2,7 @@
 ZHT is a zero-hop distributed hash table(see also the paper, http://datasys.cs.iit.edu/projects/ZHT/ZHT-CRC-PID2666213-Final.pdf).
 
 -------------------SOFTWARE REQUIREMENTS-------------------
+Before installing C++ and C binding you should install g++ compiler in your system.
 
 Google protocol buffers c++ binding, VERSION 2.4.1 (this and 2.4.0 version only supported by the ZHT-master so take of this)
 		https://launchpad.net/ubuntu/+archive/primary/+files/protobuf_2.4.1.orig.tar.gz
@@ -16,7 +17,7 @@ Google protocol buffers c binding, VERSION 0.15 (later version not supported to 
 		http://code.google.com/p/protobuf-c/downloads/list
 		
 		./configure
-		make 
+		make (if you got a error the run sudo ldconfig, then try make again)
 		sudo make install
 
 -------------------ABOUT ZHT API, SPECIAL ATTENTION-------------------
